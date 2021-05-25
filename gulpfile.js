@@ -48,7 +48,7 @@ function formStyles() {
         })
     )
     .pipe(autopref())
-    .pipe(concat(`style.css`))
+    .pipe(concat(`form.css`))
         .pipe(gulp.dest(build.css))
     .pipe(cleanCSS({
         level: 2 
@@ -69,7 +69,7 @@ function pdfStyles() {
         })
     )
     .pipe(autopref())
-    .pipe(concat(`style.css`))
+    .pipe(concat(`pdf.css`))
         .pipe(gulp.dest(build.css))
     .pipe(cleanCSS({
         level: 2 
@@ -172,7 +172,8 @@ function watch() {
         }
     });
     // SASS
-    gulp.watch(src.css, styles)
+    gulp.watch(src.pdfCSS, pdfStyles)
+    gulp.watch(src.formCSS, formStyles)
     gulp.watch(src.img, compress)
     gulp.watch(src.js, devScripts)
     gulp.watch(src.lib, libraries)
