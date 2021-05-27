@@ -89,7 +89,7 @@ html, body {
 
 html {
   overflow-x: hidden;
-  min-width: 970px;
+  min-width: 320px;
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
@@ -143,17 +143,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-title {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 145%;
   text-align: center;
 }
 
+@media (min-width: 1000px) {
+  .page-title {
+    font-size: 30px;
+  }
+}
+
 .form {
+  width: 100%;
   margin-top: 60px;
   margin-bottom: 100px;
-  width: 970px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 1000px) {
+  .form {
+    width: 970px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .form .page-title {
@@ -163,11 +176,22 @@ h1, h2, h3, h4, h5, h6 {
 .form .labels.type1 {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
 }
 
-.form .labels.type1 .fluid {
-  grid-column: 1 / span 2;
+@media (min-width: 1000px) {
+  .form .labels.type1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .form .labels.type1 .fluid {
+    grid-column: 1 / span 2;
+  }
+}
+
+.form .fieldset {
+  max-width: 100%;
 }
 
 .form .fieldset + .fieldset {
@@ -194,9 +218,15 @@ h1, h2, h3, h4, h5, h6 {
   background: #0A79CF;
   border-radius: 5px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 23px;
   color: #FFFFFF;
+}
+
+@media (min-width: 1000px) {
+  .form__submit {
+    font-size: 16px;
+  }
 }
 
 .label {
@@ -228,11 +258,19 @@ h1, h2, h3, h4, h5, h6 {
 .two-labels-box {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, 100%);
 }
 
-.two-labels-box .lg {
-  grid-column: 2 / span 5;
+@media (min-width: 1000px) {
+  .two-labels-box {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .two-labels-box .lg {
+    grid-column: 2 / span 5;
+  }
 }
 
 label {

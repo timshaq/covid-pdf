@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/form.min.css">
 </head>
 
@@ -97,7 +98,7 @@
 				<span class="label__name">
 					Birth date / Дата рождения:
 				</span>
-				<input type="text" placeholder="Укажите дату рождения...">
+				<input id="bornDate" type="text" placeholder="Укажите дату рождения...">
 			</label>
 			
 			<div class="two-labels-box">
@@ -113,16 +114,23 @@
 					<span class="label__name">
 						Analysis date / Дата сдачи анализа:
 					</span>
-					<input type="text" placeholder="Укажите дату сдачи...">
+					<input id="analysDate" type="text" placeholder="Укажите дату сдачи...">
 				</label>
 				
 			</div>
 			
-			<label class="label fluid">
+			<label class="label ">
 				<span class="label__name">
-					Test result and date / Результат и дата теста:
+					Test result/ Результат:
 				</span>
 				<input type="text" placeholder="Укажите результат и дату теста...">
+			</label>
+			
+			<label class="label ">
+				<span class="label__name">
+					Test date / Дата теста:
+				</span>
+				<input id="testDate" type="text" placeholder="Укажите результат и дату теста...">
 			</label>
 
 		</div>
@@ -141,6 +149,9 @@
 
 <footer class="footer"></footer>
 
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="assets/js/script.min.js"></script>
 
 </body>
 

@@ -64,7 +64,7 @@ html, body
 	-webkit-overflow-scrolling: touch
 html
 	overflow-x: hidden
-	min-width: 970px
+	min-width: 320px
 	max-width: 1920px
 	margin-right: auto
 	margin-left: auto
@@ -99,25 +99,33 @@ select
 	height: 100px
 .page-title
 	font-weight: 700
-	font-size: 30px
+	font-size: 22px
 	line-height: 145%
 	text-align: center
+	@media(min-width:1000px)
+		font-size: 30px
 .form
+	width: 100%
 	margin-top: 60px
 	margin-bottom: 100px
-	width: 970px
-	margin-right: auto
-	margin-left: auto
+	padding: 0 15px
+	@media(min-width:1000px)
+		width: 970px
+		margin-right: auto
+		margin-left: auto
 	& .page-title
 		margin-bottom: 40px
 	& .labels
 		&.type1
 			display: grid
 			grid-gap: 30px
-			grid-template-columns: repeat(2,1fr)
+			@media(min-width:1000px)
+				grid-template-columns: repeat(2,1fr)
 			& .fluid
-				grid-column: 1 / span 2
+				@media(min-width:1000px)
+					grid-column: 1 / span 2
 	& .fieldset
+		max-width: 100%
 		& + .fieldset
 			margin-top: 40px
 			padding-top: 40px
@@ -132,9 +140,11 @@ select
 		background: #0A79CF
 		border-radius: 5px
 		font-weight: 600
-		font-size: 16px
+		font-size: 14px
 		line-height: 23px
 		color: #FFFFFF
+		@media(min-width:1000px)
+			font-size: 16px
 .label
 	display: flex
 	flex-direction: column
@@ -151,9 +161,12 @@ select
 .two-labels-box
 	display: grid
 	grid-gap: 30px
-	grid-template-columns: repeat(6,1fr)
+	grid-template-columns: repeat(auto-fill,100%)
+	@media(min-width:1000px)
+		grid-template-columns: repeat(6,1fr)
 	& .lg
-		grid-column: 2 / span 5
+		@media(min-width:1000px)
+			grid-column: 2 / span 5
 label
 	display: block
 select, input
